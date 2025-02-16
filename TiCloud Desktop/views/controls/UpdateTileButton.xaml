@@ -1,8 +1,7 @@
 ﻿<UserControl x:Class="TiCloud_Desktop.views.controls.UpdateTileButton"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-             xmlns:models="clr-namespace:TiCloud.Core.Database.Models" 
-             
+             xmlns:models="clr-namespace:TiCloud.Core.Database.Models"   
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:TiCloud_Desktop.views.models"
              xmlns:svg="http://sharpvectors.codeplex.com/svgc/"
@@ -11,9 +10,6 @@
 
 
     <Grid>
-
-
-
         <!--Podział widoku na wiersze-->
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
@@ -37,8 +33,11 @@
         </Grid.ColumnDefinitions>
 
         <!--Tło przycisku-->
-        <Border Background="#FFFEFEFF" 
-                CornerRadius="15,15,15,15" Grid.RowSpan="9" Grid.ColumnSpan="9"
+        <Border 
+            Background="#FFFEFEFF" 
+            CornerRadius="15,15,15,15" 
+            Grid.RowSpan="9" 
+            Grid.ColumnSpan="9"
                 
         />
 
@@ -50,22 +49,26 @@
             Grid.Row="1"
             Grid.RowSpan="4">
 
-            <svg:SvgViewbox Source="{Binding IconName, StringFormat='/resources/images/{0}.svg'}" Width="34" Height="34" />
+            <svg:SvgViewbox 
+                Source="{Binding IconName, StringFormat='/resources/images/{0}.svg', RelativeSource={RelativeSource AncestorType=UserControl}}"
+                Width="34" 
+                Height="34" 
+            />
 
         </Border>
 
         <!--Ikona wersji-->
-        <svg:SvgViewbox Source="/resources/images/version_icon.svg" 
-                 Width="15" 
-                 Height="15" 
+        <svg:SvgViewbox 
+            Source="/resources/images/version_icon.svg" 
+            Width="15" 
+            Height="15" 
                  
-                 Grid.Column="3"
-                 Grid.Row="2"
+            Grid.Column="3"
+            Grid.Row="2"
         />
 
         <TextBlock 
-            Text="{Binding Version, FallbackValue='Test'}" 
-            
+            Text="{Binding Version, FallbackValue='Test', RelativeSource={RelativeSource AncestorType=UserControl}}"   
             Foreground="#CC343435" 
             FontSize="13" 
             Grid.Column="5" 
@@ -76,7 +79,7 @@
         />
 
         <TextBlock 
-             Text="{Binding Text, FallbackValue='Test'}"
+             Text="{Binding Text, FallbackValue='Test', RelativeSource={RelativeSource AncestorType=UserControl}}"
              Foreground="#CC0D0D0D" 
              FontSize="14"
              FontFamily="Alef" 
@@ -87,21 +90,28 @@
         />
 
         <TextBlock 
-             Text="{Binding Date, FallbackValue='test'}"
+             Text="{Binding Date, FallbackValue='test', RelativeSource={RelativeSource AncestorType=UserControl}}"
              Foreground="#7F343435" 
              FontSize="9"
              FontFamily="Alef" 
              Grid.Column="5"
-             Grid.Row="1" Margin="192,0,0,0" HorizontalAlignment="Right" Width="86" TextAlignment="Right" FontWeight="Bold" Height="10" 
+             Grid.Row="1" 
+             Margin="192,0,0,0" 
+             HorizontalAlignment="Right" 
+             Width="86" 
+             TextAlignment="Right" 
+             FontWeight="Bold" 
+             Height="10" 
      
         />
 
         <Button  
-                Click="Button_Click"
-                Background="#00808080" 
-                BorderBrush="#00707070" 
-                Foreground="#00000000" 
-                BorderThickness="0,0,0,0" FontFamily="Rockwell"
+            Click="Button_Click"
+            Background="#00808080" 
+            BorderBrush="#00707070" 
+            Foreground="#00000000" 
+            BorderThickness="0,0,0,0" 
+            FontFamily="Rockwell" Grid.ColumnSpan="7" Grid.RowSpan="6"
         />
 
     </Grid>

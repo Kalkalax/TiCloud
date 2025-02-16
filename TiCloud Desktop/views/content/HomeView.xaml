@@ -4,7 +4,8 @@
              xmlns:custom="clr-namespace:TiCloud_Desktop.views.controls"
              xmlns:svg="http://sharpvectors.codeplex.com/svgc/"
              Background="#FFF8F8F8"
-             Height="580" Width="779">
+             Height="580" Width="779"
+             xmlns:local="clr-namespace:TiCloud_Desktop.views.controls">
 
     <Grid>
 
@@ -72,15 +73,14 @@
             FontWeight="Bold"
         />
 
-        
-        
+
         
 
-        <custom:UpdateTileList Margin="0,315,0,20">
+
+        <ItemsControl ItemsSource="{Binding UpdateTileButtons}" Margin="0,310,0,0">
             
-            
-            
-        </custom:UpdateTileList>
+        </ItemsControl>
+
 
     </Grid>
 </UserControl>

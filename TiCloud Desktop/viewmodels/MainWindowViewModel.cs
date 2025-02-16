@@ -1,57 +1,54 @@
 ﻿using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using TiCloud_Desktop.views.content;
 
 namespace TiCloud_Desktop.viewmodels
 {
     public class MainWindowViewModel : INotifyPropertyChanged
     {
-        private object _currentView;
-        
+        private object _currentViewModel;
 
-        public object CurrentView
+        public object CurrentViewModel
         {
-            get => _currentView;
+            get => _currentViewModel;
             set
             {
-                if (_currentView != value)
+                if (_currentViewModel != value)
                 {
-                    _currentView = value;
-                    OnPropertyChanged(nameof(CurrentView));
+                    _currentViewModel = value;
+                    OnPropertyChanged(nameof(CurrentViewModel));
                 }
+
             }
         }
+
 
         public RelayCommand ShowHomeCommand { get; }
         public RelayCommand ShowDatabaseCommand { get; }
 
-
-
-
         public MainWindowViewModel()
         {
-            // Domyślny widok
-            CurrentView = new HomeView();
-            //CurrentView = new DatabaseView();
+            // Domyślnie ustaw HomeViewModel
+            CurrentViewModel = new HomeViewModel();
 
-            ShowHomeCommand = new RelayCommand(ExecuteShowHome);
-            ShowDatabaseCommand = new RelayCommand(ExecuteShowDatabase);
-            //ShowDatabaseCommand = new RelayCommand(() => CurrentView = new DatabaseViewModel());
+            //ShowHomeCommand = new RelayCommand(ExecuteShowHome);
+            //ShowDatabaseCommand = new RelayCommand(ExecuteShowDatabase);
+
+            ShowHomeCommand = new RelayCommand(() => CurrentViewModel = new HomeViewModel());
+            ShowDatabaseCommand = new RelayCommand(() => CurrentViewModel = new DatabaseViewModel());
         }
 
-        private void ExecuteShowHome()
-        {
-            Debug.WriteLine("Home button clicked");
-            CurrentView = new HomeView(); // Zmiana widoku na Home
-        }
+        //private void ExecuteShowHome()
+        //{
+        //    Debug.WriteLine("Home button clicked");
+        //    CurrentViewModel = new HomeViewModel();
+        //}
 
-        private void ExecuteShowDatabase()
-        {
-            Debug.WriteLine("Database button clicked");
-            CurrentView = new DatabaseView(); // Zmiana widoku na Database
-        }
-
+        //private void ExecuteShowDatabase()
+        //{
+        //    Debug.WriteLine("Database button clicked");
+        //    CurrentViewModel = new DatabaseViewModel();
+        //}
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
