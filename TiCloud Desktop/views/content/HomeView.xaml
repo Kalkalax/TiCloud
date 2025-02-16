@@ -74,12 +74,17 @@
         />
 
 
-        
 
 
-        <ItemsControl ItemsSource="{Binding UpdateTileButtons}" Margin="0,310,0,0">
+        <ScrollViewer VerticalScrollBarVisibility="Hidden" 
+                      HorizontalScrollBarVisibility="Disabled" 
+                      Margin="0,315,0,20">
             
-        </ItemsControl>
+            <ItemsControl 
+                ItemsSource="{Binding UpdateTileButtons}">
+
+            </ItemsControl>
+        </ScrollViewer>
 
 
     </Grid>

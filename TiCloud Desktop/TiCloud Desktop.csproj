@@ -81,6 +81,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Realm" Version="20.0.0" />
     <PackageReference Include="SharpVectors.Wpf" Version="1.8.4.2" />
   </ItemGroup>

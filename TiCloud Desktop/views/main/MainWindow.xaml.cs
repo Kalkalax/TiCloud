@@ -1,15 +1,10 @@
-﻿using MongoDB.Bson;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Interop;
 using System.Windows.Media.Imaging;
-using TiCloud.Core.Database;
-using TiCloud.Core.Database.Models;
-using TiCloud.Core.Timers;
 using TiCloud_Desktop.core.data;
+using TiCloud_Desktop.core.data.models;
 using TiCloud_Desktop.viewmodels;
-using TiCloud_Desktop.views.content;
 
 //TODO: Tu jest wszystko do zrobienia, wyczyścić kod, dopisać funkcje(minimalizowanie,usuwanie projektów), poprawić komentarze
 
@@ -21,11 +16,12 @@ namespace TiCloud_Desktop
     public partial class MainWindow : Window
     {
         private readonly NotifyIcon _notifyIcon;
+
         //private readonly WorkTimeTracker _workTimeTracker;
         //private readonly RefreshTimer _refreshTimer;
         //private readonly WorkPeriod _currentWorkPeriod;
         //private readonly List<WorkPeriod> _WorkPeriods;
-                                                            
+
 
         public MainWindow()
         {
@@ -33,6 +29,12 @@ namespace TiCloud_Desktop
 
             // Sprawdzenie listy aktualizacji
             Debug.WriteLine($"Znaleziono {UpdateInfoManager.CountUpdateFiles()} aktualizacji");
+            
+            
+
+
+
+
 
             DataContext = new MainWindowViewModel();
 
