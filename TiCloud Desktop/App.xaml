@@ -4,13 +4,14 @@
              xmlns:local="clr-namespace:TiCloud"
              StartupUri="views/main/MainWindow.xaml">
 
-
+    
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 
                 <ResourceDictionary Source="styles/MenuButton.xaml" />
                 <ResourceDictionary Source="styles/TimerButton.xaml" />
+                <ResourceDictionary Source="styles/ProjectsList.xaml" />
                 
                 
             </ResourceDictionary.MergedDictionaries>

@@ -47,6 +47,7 @@
         />
 
         <ComboBox 
+            Style="{DynamicResource ProjectsList}" 
             x:Name="ProjectsList_ComboBox" 
             DisplayMemberPath="ProjectName"
             SelectedValuePath="ProjectID"
