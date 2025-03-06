@@ -11,6 +11,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="649" d:DesignWidth="63">
 
+
     <Grid>
 
         <!-- Tło paska menu -->
@@ -34,9 +35,12 @@
 
         <!-- Ikona menu głównego -->
         <Button 
+            x:Name="HomeButton"
             Style="{DynamicResource MenuButton.xaml}" 
-            Margin="11,82,13,528"
-            Command="{Binding ShowHomeCommand}">
+            Margin="12,82,12,528"
+            Command="{Binding ShowHomeCommand}"
+            Click=" BorderFromSelectedButton_Click"
+            >
             <Button.Content>
                 <svg:SvgViewbox Source="/resources/images/home_icon.svg" Width="24" Height="24" />
             </Button.Content>
@@ -44,13 +48,29 @@
 
         <!-- Ikona menu bazy danych projektów -->
         <Button 
+            x:Name="DatabaseButton"
             Style="{DynamicResource MenuButton.xaml}" 
-            Margin="11,142,13,468"
-            Command="{Binding ShowDatabaseCommand}">
+            Margin="12,142,12,468"
+            Command="{Binding ShowDatabaseCommand}"
+            Click="BorderFromSelectedButton_Click"
+            MouseEnter="Button_MouseEnter"
+            MouseLeave="Button_MouseLeave"
+            >
             <Button.Content>
                 <svg:SvgViewbox Source="/resources/images/database_icon.svg" Width="24" Height="24" />
             </Button.Content>
         </Button>
+        
+        <!-- Ramka do animacji-->
+        <Border
+            x:Name="AnimationBorder"
+            Width="39"
+            Height="39"
+            BorderBrush="#FFF2541B"
+            Margin="12,82,12,528"
+            BorderThickness="1,1,1,1" 
+            CornerRadius="12,12,12,12">
+        </Border>
 
 
     </Grid>

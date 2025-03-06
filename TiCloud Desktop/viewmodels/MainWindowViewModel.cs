@@ -7,6 +7,7 @@ namespace TiCloud_Desktop.viewmodels
     public class MainWindowViewModel : INotifyPropertyChanged
     {
         private object _currentViewModel;
+        private string _activeViewModelName;
 
         public object CurrentViewModel
         {
@@ -17,8 +18,24 @@ namespace TiCloud_Desktop.viewmodels
                 {
                     _currentViewModel = value;
                     OnPropertyChanged(nameof(CurrentViewModel));
+                    // Ustaw nazwę aktywnego widoku
+                    ActiveViewModelName = value?.GetType().Name;
+                    //Debug.Print(ActiveViewModelName);
                 }
 
+            }
+        }
+
+        public string ActiveViewModelName
+        {
+            get => _activeViewModelName;
+            private set
+            {
+                if (_activeViewModelName != value)
+                {
+                    _activeViewModelName = value;
+                    OnPropertyChanged(nameof(ActiveViewModelName));
+                }
             }
         }
 
@@ -36,6 +53,10 @@ namespace TiCloud_Desktop.viewmodels
 
             ShowHomeCommand = new RelayCommand(() => CurrentViewModel = new HomeViewModel());
             ShowDatabaseCommand = new RelayCommand(() => CurrentViewModel = new DatabaseViewModel());
+
+
+
+
         }
 
         //private void ExecuteShowHome()

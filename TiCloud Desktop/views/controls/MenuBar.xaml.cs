@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using TiCloud;
-using TiCloud_Desktop.viewmodels;
+using System.Windows.Controls;
+using Color = System.Windows.Media.Color;
+using ColorConverter = System.Windows.Media.ColorConverter;
+using Button = System.Windows.Controls.Button;
+using Brushes = System.Windows.Media.Brushes;
 
+//TODO: Dodać animacje ramki, dodać inny kolor nie aktywnych ikon
 
 namespace TiCloud_Desktop.views.controls
 {
@@ -23,10 +16,65 @@ namespace TiCloud_Desktop.views.controls
     /// </summary>
     public partial class MenuBar : System.Windows.Controls.UserControl
     {
+        private static Button ActiveButtonBorder { get; set; }
+
         public MenuBar()
         {
             InitializeComponent();
-           // DataContext = new MainWindowViewModel();
+
+            ActiveButtonBorder = HomeButton;
+        }
+
+        private void BorderFromSelectedButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (ActiveButtonBorder != null)
+            {
+                ActiveButtonBorder.BorderBrush = Brushes.Transparent; // lub inny domyślny kolor
+                ActiveButtonBorder.MouseEnter += Button_MouseEnter;
+                ActiveButtonBorder.MouseLeave += Button_MouseLeave;
+            }
+
+
+            Button button = (Button)sender;
+
+            Debug.WriteLine($"{button.Name}");
+
+            button.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFF2541B"));
+            button.MouseEnter += Button_MouseLeave;
+            ActiveButtonBorder = button;
+
+            SetBorderBrushForActiveButton(button);
+
+            //Tu dodajemy nowe lokalizacje przycisków
+            if (button.Name == "HomeButton")
+            {
+                AnimationBorder.Margin = new Thickness(12, 82, 12, 528);
+            }
+            if (button.Name == "DatabaseButton") {
+                AnimationBorder.Margin= new Thickness(12, 142, 12, 468);
+            }
+  
+
+        }
+
+
+        private void Button_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#7FF2541B"));
+        }
+
+        private void Button_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#00F9641B"));
+
+        }
+
+        private void SetBorderBrushForActiveButton(Button button)
+        {
+            // Kolor BorderBrush dla aktywnego przycisku po kliknięciu
+            button.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#00cccfd2"));
         }
     }
 }
