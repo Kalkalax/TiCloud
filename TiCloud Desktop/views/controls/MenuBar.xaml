@@ -54,12 +54,28 @@
             Command="{Binding ShowDatabaseCommand}"
             Click="BorderFromSelectedButton_Click"
             MouseEnter="Button_MouseEnter"
-            MouseLeave="Button_MouseLeave"
-            >
+            MouseLeave="Button_MouseLeave">
             <Button.Content>
                 <svg:SvgViewbox Source="/resources/images/database_icon.svg" Width="24" Height="24" />
             </Button.Content>
         </Button>
+        
+        <!--Ikona zamknięcia aplikacji-->
+        <Button
+            x:Name="ExitButtonx"
+            Style="{DynamicResource MenuButton.xaml}" 
+            Margin="12,586,12,24"
+            MouseEnter="Button_MouseEnter"
+            MouseLeave="Button_MouseLeave" 
+            Click="ExitButton_Click">
+            <Button.Content>
+                <svg:SvgViewbox Source="/resources/images/exit_icon.svg" Width="24" Height="24" Margin="4,0,0,0" />
+            </Button.Content>
+        </Button>
+        
+        
+        
+        
         
         <!-- Ramka do animacji-->
         <Border

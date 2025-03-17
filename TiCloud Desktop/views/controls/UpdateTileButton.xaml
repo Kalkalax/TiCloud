@@ -105,7 +105,8 @@
      
         />
 
-        <Button  
+        <Button Template="{DynamicResource ButtonTemplate1}"  
+            Style="{DynamicResource UpdateTileButton.xaml}" 
             Click="Button_Click"
             Background="#00808080" 
             BorderBrush="#00707070" 

@@ -76,5 +76,12 @@ namespace TiCloud_Desktop.views.controls
             // Kolor BorderBrush dla aktywnego przycisku po kliknięciu
             button.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#00cccfd2"));
         }
+
+        //TODO: dodać tu sprawdzenie czy liczony jest czas, jeśli tak to zwijamy do zasobnika albo wyswietlamy okno dialogowe czy chcemy zamknąć czy zwinąć
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Zamknięcie aplikacji
+            System.Windows.Application.Current.Shutdown();
+        }
     }
 }

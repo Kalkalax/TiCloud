@@ -29,8 +29,9 @@ namespace TiCloud
         public static void Initialize()
         {
             InitializeAppFolders();
-            InitializeEncryptionKey();
             InitializeDatabase();
+            InitializeEncryptionKey();
+            
         }
 
         /// <summary>

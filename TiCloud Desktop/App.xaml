@@ -12,7 +12,7 @@
                 <ResourceDictionary Source="styles/MenuButton.xaml" />
                 <ResourceDictionary Source="styles/TimerButton.xaml" />
                 <ResourceDictionary Source="styles/ProjectsList.xaml" />
-                
+                <ResourceDictionary Source="styles/UpdateTileButton.xaml" />
                 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

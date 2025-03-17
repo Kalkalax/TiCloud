@@ -13,9 +13,9 @@ namespace TiCloud
         {
             
 
-            AppInitializer.Initialize();
+            
             base.OnStartup(e);
-
+            AppInitializer.Initialize();
         }
 
 

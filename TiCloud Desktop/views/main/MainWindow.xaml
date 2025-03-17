@@ -11,8 +11,7 @@
         
         xmlns:vm="clr-namespace:TiCloud_Desktop.viewmodels"
 
-
-        mc:Ignorable="d"
+       
         Title="BaseWindow" 
         WindowStartupLocation="CenterScreen" 
         Background="#FFF8F8F8"
@@ -22,6 +21,8 @@
     <Window.DataContext>
         <local:MainWindowViewModel />
     </Window.DataContext>
+    
+   
 
     <Window.Resources>
         <DataTemplate DataType="{x:Type vm:HomeViewModel}">

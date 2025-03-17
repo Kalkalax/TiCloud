@@ -18,7 +18,9 @@ namespace TiCloud_Desktop.views.controls
         private readonly List<WorkPeriod> _WorkPeriods;
         private WorkPeriod _currentWorkPeriod;
 
+
         public TimerBar()
+
         {
             InitializeComponent();
 
