@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using System.IO;
 using System.Security.Cryptography;
+using TiCloud_Desktop.core.data;
 
 namespace TiCloud.Core.Security
 {
@@ -58,8 +59,8 @@ namespace TiCloud.Core.Security
             byte[] unprotectedKey = ProtectedData.Unprotect(protectedKey, null, DataProtectionScope.CurrentUser);
 
             // Wyświetlanie hex w debug
-            Debug.WriteLine(BitConverter.ToString(unprotectedKey).Replace("-", "").ToLower());
-
+            Debug.WriteLine($"[Debug] {BitConverter.ToString(unprotectedKey).Replace("-", "").ToLower()}");
+      
             return unprotectedKey;
         }
     }

@@ -27,8 +27,9 @@ namespace TiCloud_Desktop
         {
             InitializeComponent();
 
-            // Sprawdzenie listy aktualizacji
-            Debug.WriteLine($"Znaleziono {UpdateInfoManager.CountUpdateFiles()} aktualizacji");
+            //DEBUG
+            //Sprawdzenie listy aktualizacji
+            Debug.WriteLine($"[Debug] Liczba znalezionych aktualizacji: {UpdateInfoManager.CountUpdateFiles()}");
             
             
 
