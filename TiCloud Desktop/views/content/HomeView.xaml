@@ -14,78 +14,89 @@
             <ColumnDefinition Width="380"/>
             <ColumnDefinition Width="18"/>
             <ColumnDefinition Width="380"/>
-
         </Grid.ColumnDefinitions>
 
+        <!--Nagłówek strony głównej-->
         <TextBlock 
             Text="Statistics of the week"
             HorizontalAlignment="Center" 
             VerticalAlignment="Top" 
+            FontFamily="Alef"
             FontSize="20" 
             Height="24" 
             Width="380" 
+            Foreground="#FF353535" 
             FontWeight="Bold" 
-            Grid.Column="0" 
         />
 
+        <!--Obszar wykresu tygodniowego (nie dostępny aktualnie)-->
         <Border
             Width="380"
             CornerRadius="15" 
             Background="#FFFEFEFE" 
             Margin="0,43,0,317" 
-            Grid.Column="0" 
+            Grid.Column="0">
+
+            <!--Zawartość wykresu-->
+            <TextBlock 
+                Text="Not available yet" 
+                HorizontalAlignment="Center" 
+                FontSize="11" 
+                Margin="0,103,0,103" 
+                FontFamily="Alef" 
+                Foreground="#F2353535" 
+                FontWeight="Regular" 
+            />
+
+        </Border>
+
+        <!--Nagłówek podobszaru-->
+        <TextBlock 
+            Text="Whats new"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            FontSize="13" 
+            Height="20" 
+            Width="380" 
+            Margin="0,290,0,0" 
+            FontWeight="Bold" 
+            FontFamily="Alef" 
+            Foreground="#FF353535"
         />
 
+        <!--Obszar listy ostatnich aktualizacji-->
+        <ScrollViewer 
+            VerticalScrollBarVisibility="Hidden" 
+            HorizontalScrollBarVisibility="Disabled" 
+            Margin="0,315,0,20">
+
+            <!--Zawartość obszaru-->
+            <ItemsControl 
+                ItemsSource="{Binding UpdateTileButtons}">
+            </ItemsControl>
+
+        </ScrollViewer>
+
+        <!--Obszar szcegółowych informacji o nowościach-->
         <Border
             Width="380"
             Height="580"
             CornerRadius="15" 
             Background="#FFFEFEFE" 
             Margin="0,0,0,0" 
-            Grid.Column="2" 
-        />
+            Grid.Column="2">
 
-        <TextBlock 
-           Text="Not available yet" 
-           HorizontalAlignment="Center" 
-           FontSize="11" 
-           Height="15" 
-           Width="84" Margin="0,146,0,420" 
-        />
+            <!--Zawartość obszaru-->
+            <TextBlock 
+                Text="Not available yet" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                FontSize="11" 
+                Foreground="#F2353535" FontFamily="Alef" 
+            />
 
-        <TextBlock 
-           Text="Not available yet" 
-           HorizontalAlignment="Center" 
-           VerticalAlignment="Center" 
-           FontSize="11" 
-           Height="15" 
-           Width="84"
-           Grid.Column="2" 
-        />
-        <TextBlock 
-            Text="Whats new"
-            HorizontalAlignment="Center" 
-            VerticalAlignment="Top" 
-            FontSize="13" 
-            Height="21" 
-            Width="380" 
-            Margin="0,289,0,0" 
-            FontWeight="Bold"
-        />
-
-
-
-
-        <ScrollViewer VerticalScrollBarVisibility="Hidden" 
-                      HorizontalScrollBarVisibility="Disabled" 
-                      Margin="0,315,0,20">
-            
-            <ItemsControl 
-                ItemsSource="{Binding UpdateTileButtons}">
-
-            </ItemsControl>
-        </ScrollViewer>
-
+        </Border>
 
     </Grid>
+
 </UserControl>

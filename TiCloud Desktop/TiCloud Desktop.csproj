@@ -23,6 +23,12 @@
 
   <ItemGroup>
     <None Remove="core\FolderStructure.md" />
+    <None Remove="resources\fonts\Alef-Bold.ttf" />
+    <None Remove="resources\fonts\Alef-Regular.ttf" />
+    <None Remove="resources\fonts\PTSans-Bold.ttf" />
+    <None Remove="resources\fonts\PTSans-BoldItalic.ttf" />
+    <None Remove="resources\fonts\PTSans-Italic.ttf" />
+    <None Remove="resources\fonts\PTSans-Regular.ttf" />
     <None Remove="resources\images\clock_icon.svg" />
     <None Remove="resources\images\database_icon.svg" />
     <None Remove="resources\images\gift_icon.svg" />
@@ -43,6 +49,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="resources\fonts\Alef-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\fonts\Alef-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\fonts\PTSans-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\fonts\PTSans-BoldItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\fonts\PTSans-Italic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\fonts\PTSans-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="resources\images\clock_icon.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

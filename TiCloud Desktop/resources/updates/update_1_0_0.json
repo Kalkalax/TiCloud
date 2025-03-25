@@ -4,9 +4,6 @@
   "releaseDate": "12.2024",
   "description": "First version of the application",
   "icon": {
-    "source": "/resources/images/gift_icon.svg",
-    "width": 40,
-    "height": 40,
-    "margin": "0,0,10,0"
+    "source": "/resources/images/gift_icon.svg"
   }
 }

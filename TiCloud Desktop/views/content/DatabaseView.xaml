@@ -6,8 +6,118 @@
              Background="#FFF8F8F8"
              Height="580" Width="779">
     <Grid>
-        <TextBlock Margin="260,215,0,0">Strona bazy danych</TextBlock>
 
-        
+
+        <!--Podział widoku na kolumny-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="380"/>
+            <ColumnDefinition Width="18"/>
+            <ColumnDefinition Width="380"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Nagłówek strony bazy danych-->
+        <TextBlock 
+            Text="Projects database"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            FontFamily="Alef"
+            FontSize="20" 
+            Height="24" 
+            Width="380" 
+            Foreground="#FF353535" 
+            FontWeight="Bold" 
+        />
+
+        <Border 
+            Width="380"
+            Height="31"
+            Margin="0,43,0,506"
+            CornerRadius="15"
+            Background="#FFF2F2F2" 
+            BorderBrush="#FF343435" 
+            BorderThickness="1" 
+            >
+            <Grid>
+                <TextBlock 
+                    Text="Project name"
+                    Width="156" 
+                    Height="23"
+                    Margin="0,0,222,0" 
+                    FontFamily="Alef" 
+                    FontWeight="DemiBold" 
+                    Padding="44,4,0,0" 
+                    FontSize="13" 
+                    Foreground="#FF353535" 
+                />
+                <Line 
+                    Margin="156,3,221,3" 
+                    Fill="#FFFEFEFE" 
+                    RenderTransformOrigin="0.87,0.516" 
+                    Y2="23" 
+                    Stroke="#FFFEFEFE"
+                />
+                <TextBlock 
+                    Text="Identificator"
+                    Width="156" 
+                    Height="23"
+                    Margin="157,3,65,3" 
+                    FontFamily="Alef" 
+                    FontWeight="DemiBold" 
+                    Padding="42,4,0,0" FontSize="13" Foreground="#FF353535" 
+                />
+                <Line 
+                    Margin="313,3,64,3" 
+                    Fill="#FFFEFEFE" 
+                    RenderTransformOrigin="0.87,0.516" 
+                    Y2="23" 
+                    Stroke="#FFFEFEFE"
+                />
+                <TextBlock 
+                    Text="Option" 
+                    Height="23"
+                    
+                    FontFamily="Alef" 
+                    FontWeight="DemiBold" 
+                    Padding="10,4,0,0" 
+                    Margin="314,3,0,3" FontSize="13" Foreground="#FF353535" 
+                />
+
+            </Grid>
+
+
+
+
+
+
+
+
+        </Border>
+
+
+
+
+
+        <!--Obszar szcegółowych informacji o nowościach-->
+        <Border
+            Width="380"
+            Height="580"
+            CornerRadius="15" 
+            Background="#FFFEFEFE" 
+            Margin="0,0,0,0" 
+            Grid.Column="2">
+
+            <!--Zawartość obszaru-->
+            <TextBlock 
+                Text="Not available yet" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                FontSize="11" 
+                Foreground="#F2353535" FontFamily="Alef" 
+            />
+
+        </Border>
+
+
+
     </Grid>
 </UserControl>

@@ -4,6 +4,8 @@ using System.IO;
 using TiCloud.Core.Database.Models;
 using TiCloud.Core.Security;
 
+//TODO: Sprawdzić czy dodanie kodu do sprawdzania czy baza istnieje zniesie bład zwiazany z inicjalizacją
+
 namespace TiCloud.Core.Database
 {
     /// <summary>

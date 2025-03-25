@@ -4,9 +4,6 @@
   "releaseDate": "02.2025",
   "description": "Improvement of time display errors",
   "icon": {
-    "source": "/resources/images/clock_icon.svg",
-    "width": 0,
-    "height": 0,
-    "margin": ""
+    "source": "/resources/images/clock_icon.svg"
   }
 }

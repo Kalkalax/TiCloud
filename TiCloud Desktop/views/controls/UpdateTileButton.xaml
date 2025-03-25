@@ -60,39 +60,37 @@
         <!--Ikona wersji-->
         <svg:SvgViewbox 
             Source="/resources/images/version_icon.svg" 
-            Width="15" 
-            Height="15" 
+            Width="14" 
+            Height="14" 
                  
             Grid.Column="3"
-            Grid.Row="2"
+            Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
         />
 
         <TextBlock 
-            Text="{Binding Version, FallbackValue='Test', RelativeSource={RelativeSource AncestorType=UserControl}}"   
-            Foreground="#CC343435" 
-            FontSize="13" 
+            Text="{Binding Version, FallbackValue='2.0.0', RelativeSource={RelativeSource AncestorType=UserControl}}"   
+            Foreground="#E5343435" 
             Grid.Column="5" 
             Grid.Row="2" 
             VerticalAlignment="Center" 
             HorizontalAlignment="Left" 
             Height="15" Width="50"
+            FontFamily="pack://application:,,,/resources/fonts/#PT Sans" FontWeight="Bold" UseLayoutRounding="True" Padding="0,0,0,2" ScrollViewer.CanContentScroll="True" LineStackingStrategy="BlockLineHeight"
         />
 
         <TextBlock 
-             Text="{Binding Text, FallbackValue='Test', RelativeSource={RelativeSource AncestorType=UserControl}}"
-             Foreground="#CC0D0D0D" 
-             FontSize="14"
+             Text="{Binding Text, FallbackValue='First version of the application ', RelativeSource={RelativeSource AncestorType=UserControl}}"
+             Foreground="#E50D0D0D"
              FontFamily="Alef" 
              Grid.Column="3" 
              Grid.ColumnSpan="3"
-             Grid.Row="3" 
+             Grid.Row="3" FontSize="13.5" FontWeight="Regular" UseLayoutRounding="False" Padding="0,2,0,0" 
              
         />
 
         <TextBlock 
              Text="{Binding Date, FallbackValue='test', RelativeSource={RelativeSource AncestorType=UserControl}}"
-             Foreground="#7F343435" 
-             FontSize="9"
+             Foreground="#7F343435"
              FontFamily="Alef" 
              Grid.Column="5"
              Grid.Row="1" 
@@ -101,7 +99,7 @@
              Width="86" 
              TextAlignment="Right" 
              FontWeight="Bold" 
-             Height="10" 
+             Height="10" FontSize="10" 
      
         />
 
