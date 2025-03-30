@@ -48,7 +48,7 @@ namespace TiCloud_Desktop.views.controls
             set => SetValue(DateProperty, value);
         }
 
-            public UpdateTileButton()
+        public UpdateTileButton()
         {
             InitializeComponent();
             

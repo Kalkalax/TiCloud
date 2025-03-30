@@ -13,6 +13,8 @@
                 <ResourceDictionary Source="styles/TimerButton.xaml" />
                 <ResourceDictionary Source="styles/TimerProjectsList.xaml" />
                 <ResourceDictionary Source="styles/UpdateTileButton.xaml" />
+                <ResourceDictionary Source="styles/DatabaseProjectsTileOption.xaml" />
+                <ResourceDictionary Source="styles/DatabaseProjectsTileButton.xaml" />
                 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
